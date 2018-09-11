@@ -1,29 +1,68 @@
 <ion-header>
   <ion-navbar>
     <ion-title>
-      QR Code App
+      Intelli - Pay
     </ion-title>
   </ion-navbar>
 </ion-header>
 
 <ion-content padding>
-  <ion-item>
-    <ion-input type="text" placeholder="MY QR Code data" [(ngModel)]="qrData">
-    </ion-input>
-  </ion-item>
-  <button ion-button full icon-left (click)="createCode()"><ion-icon name="barcode"></ion-icon>Create Code</button>
-  <button ion-button full icon-left (click)="scanCode()" color="secondary"><ion-icon name="qr-scanner"></ion-icon>Scan Code</button>
+  <ion-card>
+    <ion-card-header center text-center style="background-color: #f53d3d; color: white">
+      Receive Payment
+    </ion-card-header>
+    <ion-item>
+      <ion-label stacked>Receive to</ion-label>
+      <ion-select [(ngModel)]="mode">
+        <ion-option value="Ecocash">Ecocash</ion-option>
+        <ion-option value="One Wallet">One Wallet</ion-option>
+        <ion-option value="Telecash">Telecash</ion-option>
+        <ion-option value="Zipit">ZIPIT</ion-option>
+        <ion-option value="RTGS">RTGS</ion-option>
+      </ion-select>
+    </ion-item>
+    <ion-item>
+      <ion-label stacked>Amount</ion-label>
+      <ion-input type="number" [(ngModel)]="amount"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label stacked>Name</ion-label>
+      <ion-input type="text" [(ngModel)]="name"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label stacked>Number</ion-label>
+      <ion-input type="number" [(ngModel)]="number"></ion-input>
+    </ion-item>
 
-  <ion-card *ngIf="createdCode">
-    <ngx-qrcode [qrc-value]="createdCode"></ngx-qrcode>
-    <ion-card-content>
-      <p>Value: {{ createdCode }}</p>
-    </ion-card-content>
+
+    <button ion-button full icon-left (click)="createCode()" color="secondary"><ion-icon name="barcode"></ion-icon>Create
+      Code
+    </button>
+
+
+    <ion-card *ngIf="createdCode">
+      <ngx-qrcode [qrc-value]="createdCode"></ngx-qrcode>
+      <ion-card>
+        <ion-card-header center text-center style="background-color: blue; color : white">
+          Payment Details
+        </ion-card-header>
+        <ion-card-content>
+          <ion-item>
+            Name : {{ name }}</ion-item>
+          <ion-item>
+            Amount : {{ amount }}
+          </ion-item>
+          <ion-item>
+            Received to : {{ mode }}
+          </ion-item>
+          <ion-item>
+            Number : {{ number }}
+          </ion-item>
+
+        </ion-card-content>
+      </ion-card>
+    </ion-card>
   </ion-card>
 
-  <ion-card *ngIf="scannedCode">
-    <ion-card-content>
-      Receiver: {{ scannedCode }}
-    </ion-card-content>
-  </ion-card>
+
 </ion-content>
