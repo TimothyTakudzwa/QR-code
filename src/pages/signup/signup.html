@@ -7,12 +7,58 @@
 <ion-header>
 
   <ion-navbar>
-    <ion-title>signup</ion-title>
+    <ion-title>Create Account</ion-title>
   </ion-navbar>
 
 </ion-header>
 
 
 <ion-content padding>
+  <ion-card style="background-color:rgb(255, 255, 255)">
+    <ion-card-header center text-center>
+      Basic Information
+    </ion-card-header>
+    <ion-card-content>
+      <ion-list>
+        <ion-item id="rounded">
+          <ion-label stacked>Name</ion-label>
+          <ion-input [(ngModel)]="userData.name" type="text" value=""></ion-input>
+        </ion-item>
 
+        <ion-item id="rounded">
+          <ion-label stacked>Surname</ion-label>
+          <ion-input [(ngModel)]="userData.surname" type="text" value=""></ion-input>
+        </ion-item>
+        <ion-item id="rounded">
+          <ion-label stacked>Age</ion-label>
+          <ion-input [(ngModel)]="userData.age" type="number" value=""></ion-input>
+        </ion-item>
+
+        <ion-item id="rounded">
+          <ion-label stacked>Sex</ion-label>
+          <ion-select [(ngModel)]="userData.sex">
+            <ion-option value="Male">Male</ion-option>
+            <ion-option value="Female">Female</ion-option>
+          </ion-select>
+        </ion-item>
+        <ion-item id="rounded">
+          <ion-label stacked>ID Number</ion-label>
+          <ion-input [(ngModel)]="userData.id_number" type="text" value=""></ion-input>
+        </ion-item>
+        <ion-item id="rounded">
+          <ion-label stacked>Physical Address</ion-label>
+          <ion-input [(ngModel)]="userData.physical_address" type="text" value=""></ion-input>
+        </ion-item>
+        <ion-item id="rounded">
+          <ion-label stacked>Phone Number</ion-label>
+          <ion-input [(ngModel)]="userData.mobile_number" type="number" value=""></ion-input>
+        </ion-item>
+        <ion-item>
+          <button ion-button full color="success" (click)="gotoAccountPage()">Next</button>
+        </ion-item>
+
+
+      </ion-list>
+    </ion-card-content>
+  </ion-card>
 </ion-content>

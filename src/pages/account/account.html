@@ -1,0 +1,65 @@
+<!--
+  Generated template for the AccountPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Banking Details</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <ion-card style="background-color:rgb(255, 255, 255)">
+    <ion-card-header center text-center>
+      Banking Details
+    </ion-card-header>
+    <ion-card-content>
+      <ion-list>
+        <ion-item id="rounded">
+          <ion-label stacked>Bank Name</ion-label>
+          <ion-select>
+            <ion-option value="Banc ABC">Banc ABC</ion-option>
+            <ion-option value="Ecocash">Ecocash</ion-option>
+            <ion-option value="Barclays">Barclays</ion-option>
+            <ion-option value="CABS">CABS</ion-option>
+            <ion-option value="CBZ">CBZ</ion-option>
+            <ion-option value="FBC">FBC</ion-option>
+            <ion-option value="MBCA">MBCA</ion-option>
+            <ion-option value="Met-Bank">Met-Bank</ion-option>
+            <ion-option value="NMB">NMB</ion-option>
+            <ion-option value="Stanbic">Stanbic</ion-option>
+            <ion-option value="Steward">Steward</ion-option>
+            <ion-option value="Standard Chatered">Standard Chatered</ion-option>
+            <ion-option value="ZB Bank">ZB Bank</ion-option>
+          </ion-select>
+        </ion-item>
+
+        <ion-item id="rounded">
+          <ion-label stacked>Account/Ecocash Number</ion-label>
+          <ion-input type="number" value=""></ion-input>
+        </ion-item>
+
+        <ion-item id="rounded">
+          <ion-label stacked>Branch</ion-label>
+          <ion-input type="text" value=""></ion-input>
+        </ion-item>
+        <ion-item>
+
+          <button round margin-bottom="70px" color="primary" ion-button (click)="scanButton()" full>Scan Your Bank
+            Card</button>
+
+        </ion-item>
+        <ion-item>
+          <button ion-button full color="success" (click)="nextStage()">Next</button>
+        </ion-item>
+
+
+      </ion-list>
+    </ion-card-content>
+  </ion-card>
+</ion-content>

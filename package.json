@@ -22,11 +22,13 @@
     "@angular/platform-browser-dynamic": "4.4.3",
     "@ionic-native/barcode-scanner": "^4.3.2",
     "@ionic-native/call-number": "^4.12.2",
+    "@ionic-native/card-io": "^4.12.2",
     "@ionic-native/core": "4.3.2",
     "@ionic-native/splash-screen": "4.3.2",
     "@ionic-native/status-bar": "4.3.2",
     "@ionic/storage": "2.0.1",
     "call-number": "^1.0.1",
+    "card.io.cordova.mobilesdk": "^2.1.0",
     "cordova-android": "7.0.0",
     "cordova-plugin-device": "^1.1.4",
     "cordova-plugin-ionic-webview": "^1.2.1",
@@ -57,7 +59,8 @@
       "cordova-plugin-device": {},
       "cordova-plugin-splashscreen": {},
       "cordova-plugin-ionic-webview": {},
-      "mx.ferreyra.callnumber": {}
+      "mx.ferreyra.callnumber": {},
+      "card.io.cordova.mobilesdk": {}
     },
     "platforms": [
       "android"

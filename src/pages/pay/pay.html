@@ -1,23 +1,24 @@
 <ion-header>
   <ion-navbar>
     <ion-title>
-      QR Code App
+      Intelli-Pay
     </ion-title>
   </ion-navbar>
 </ion-header>
 
 <ion-content padding>
   <ion-card>
-    <ion-card-header center text-center style="background-color : #f53d3d; color: white">
+    <ion-card-header center text-center style="background-color : #3b5998; color: white">
       Make Payment
     </ion-card-header>
 
     <ion-card-content>
-      <br/> To Make Payment, Scan the Recipient's QR Code by clicking on Scan Code Below
+      <br /> To Make Payment, Scan the Recipient's QR Code by clicking on Scan Code Below
 
 
 
-      <button ion-button full icon-left (click)="scanCode()" color="secondary"><ion-icon name="qr-scanner"></ion-icon>Scan
+      <button ion-button full icon-left (click)="scanCode()" color="secondary">
+        <ion-icon name="qr-scanner"></ion-icon>Scan
         Code
       </button>
 
@@ -46,8 +47,8 @@
             Number : {{ number }}
           </ion-item>
           <ion-item>
-            <button (click)="calling()">
-              <ion-icon color="primary" name="logo-usd" item-start></ion-icon>
+            <button (click)="calling()" round color="primary">
+              <ion-icon color="secondary" name="logo-usd" item-start></ion-icon>
               Make Payment
             </button>
           </ion-item>

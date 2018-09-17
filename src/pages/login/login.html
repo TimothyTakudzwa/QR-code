@@ -7,12 +7,38 @@
 <ion-header>
 
   <ion-navbar>
-    <ion-title>login</ion-title>
+    <ion-title center text-center>Welcome</ion-title>
   </ion-navbar>
 
 </ion-header>
 
 
 <ion-content padding>
+  <div id="container">
+    <ion-card style="background-color:#5477c2; color: white">
+      <ion-card-header center text-center style="color:white">
+        Login Page
+      </ion-card-header>
+      <ion-card-content>
+        <ion-list>
 
+          <ion-item id="rounded">
+            <ion-label stacked>Username</ion-label>
+            <ion-input type="text" value=""></ion-input>
+          </ion-item>
+
+          <ion-item id="rounded">
+            <ion-label stacked>Password</ion-label>
+            <ion-input type="password" value=""></ion-input>
+          </ion-item>
+          <ion-item>
+            <button ion-button full color="success" (click)="gotoHomepage()">Login Now</button>
+          </ion-item>
+          <ion-item>
+            <h2> No account yet? <u (click)="gotoSignupPage()" style="color:#51021F">Click to Sign-Up </u> </h2>
+          </ion-item>
+        </ion-list>
+      </ion-card-content>
+    </ion-card>
+  </div>
 </ion-content>
